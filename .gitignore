@@ -1,6 +1,16 @@
 # Video demos — not tracked in git
 *.mov
 
+# PowerPoint decks — not tracked in git (the classroom-visit deck is force-added as an exception)
+*.pptx
+
+# Photos/screenshots — not tracked in git
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.gif
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
