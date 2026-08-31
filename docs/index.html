@@ -146,96 +146,41 @@
   </dl>
 </div>
 
-<!-- ══════════════════ PANEL 1: SOLAR SYSTEM IN MOTION ══════════════════ -->
-<section>
-  <div class="panel">
-    <h2>1. The Solar System in Motion</h2>
-    <p class="subtitle">Press Play and watch the planets race around the Sun. <strong>Click any planet</strong> to learn about it.</p>
-    <div class="canvas-wrap">
-      <canvas id="cv1" height="520"></canvas>
-      <div class="info-card" id="info1">
-        <button class="close" aria-label="Close">✕</button>
-        <h3 id="info1-name"></h3>
-        <p><b id="info1-dist"></b> from the Sun</p>
-        <p>One year there = <b id="info1-year"></b></p>
-        <p id="info1-fact"></p>
-      </div>
-    </div>
-    <div class="controls">
-      <button class="ctl primary" id="play1">▶ Play</button>
-      <span class="ctl-label">Zoom:</span>
-      <button class="ctl zoom1 active" data-zoom="1.9">Inner planets</button>
-      <button class="ctl zoom1" data-zoom="6.0">To Jupiter</button>
-      <button class="ctl zoom1" data-zoom="21">Whole system</button>
-      <span class="ctl-label">Speed:</span>
-      <input type="range" id="speed1" min="0.5" max="8" step="0.5" value="2" />
-    </div>
-    <div class="banner" id="banner1">Press <strong>▶ Play</strong> to start the clock. You start zoomed in on the four rocky planets — the giant planets are far off-screen.</div>
-    <p class="caption">Each planet moves along its own <span class="gl" data-def="A stretched circle (an oval). Every planet's orbit is one.">ellipse</span> with the Sun near the middle. Watch how Mercury zips around while the far planets crawl — the farther a planet is from the Sun, the slower it moves. Panel 2 shows why.</p>
-  </div>
-</section>
-
-<!-- ══════════════════ PANEL 2: KEPLER'S SECOND LAW ══════════════════ -->
-<section>
-  <div class="panel">
-    <h2>2. Equal Areas — Kepler's Second Law</h2>
-    <p class="subtitle">Two pie slices grow for the same 30 days. One is near the Sun, one is far away. Watch what happens to their <strong>areas</strong>.</p>
-    <div class="canvas-wrap"><canvas id="cv2" height="480"></canvas></div>
-    <div class="controls">
-      <button class="ctl primary" id="play2">▶ Play</button>
-      <button class="ctl" id="reset2">↺ Restart</button>
-    </div>
-    <div class="banner" id="banner2">In 1609, Johannes Kepler discovered that a planet sweeps out <strong>equal areas in equal times</strong>. Press Play to see it happen.</div>
-    <p class="caption"><strong>The trick:</strong> when Earth is close to the Sun it moves fast (a long, skinny slice). When it's far, it moves slowly (a short, fat slice). Skinny×long and fat×short give the <strong>same area</strong> — just like two different-shaped triangles can have equal areas.</p>
-  </div>
-</section>
-
-<!-- ══════════════════ PANEL 3: KEPLER'S THIRD LAW ══════════════════ -->
-<section>
-  <div class="panel">
-    <h2>3. The Secret Pattern — Kepler's Third Law</h2>
-    <p class="subtitle">Every planet hides the same math trick. Click each planet to check it yourself.</p>
-    <p class="caption" style="margin-top:0">Take a planet's distance <span class="gl" data-def="'a' is the planet's average distance from the Sun, in AU (Earth-Sun distances).">a</span> and multiply it by itself 3 times (that's <b>a³</b>, "a cubed"). Then take its year length <span class="gl" data-def="'T' is the planet's period: how many Earth-years one trip around the Sun takes.">T</span> and multiply it by itself (that's <b>T²</b>, "T squared"). <strong>You get the same number both times. For every planet.</strong></p>
-    <div class="chips" id="chips3"></div>
-    <div class="eq-grid">
-      <div class="eq-card">
-        <h4>Distance cubed: a × a × a</h4>
-        <div class="math" id="eq3-a">Pick a planet above ☝️</div>
-        <div class="eq-bar-track"><div class="eq-bar" id="bar3-a" style="background: var(--accent);"></div></div>
-      </div>
-      <div class="eq-card">
-        <h4>Year squared: T × T</h4>
-        <div class="math" id="eq3-t">&nbsp;</div>
-        <div class="eq-bar-track"><div class="eq-bar" id="bar3-t" style="background: var(--accent-warm);"></div></div>
-      </div>
-    </div>
-    <div class="verdict" id="verdict3"></div>
-    <div class="canvas-wrap" style="margin-top:1rem"><canvas id="cv3" height="360"></canvas></div>
-    <p class="caption">The graph fills in as you check planets: every one lands on the same line, because a³ and T² always match. That's what <strong>exponents</strong> are for — spotting a pattern that plain adding can't show.</p>
-  </div>
-</section>
-
 <!-- ══════════════════ PANEL 4: TRUE SCALE ══════════════════ -->
 <section>
   <div class="panel">
-    <h2>4. How Far Is Far? A Ride on a Light Beam</h2>
-    <p class="subtitle">This strip shows the real spacing of the planets — no shrinking the gaps. Press Play to ride a beam of light (the fastest thing in the universe) from the Sun outward.</p>
-    <div class="canvas-wrap"><canvas id="cv4" height="300"></canvas></div>
+    <h2>1. How Far Is Far? Reading Giant Numbers With Exponents</h2>
+    <p class="subtitle">This strip shows the real spacing of the planets — no shrinking the gaps. The distances get so big that scientists write them with <span class="gl" data-def="A short way to write huge numbers using a power of 10. The little raised number (the exponent) tells you how many times to multiply by 10 — or how many zeros to write.">exponents</span> instead of a wall of zeros. Press Play to watch the numbers grow as you head out from the Sun.</p>
+    <div class="canvas-wrap">
+      <canvas id="cv4" height="300"></canvas>
+      <div class="info-card" id="info4">
+        <button class="close" aria-label="Close">✕</button>
+        <h3 id="info4-name"></h3>
+        <p><b id="info4-dist"></b> from the Sun</p>
+        <p>As an exponent: <b id="info4-sci"></b></p>
+        <p>Light takes <b id="info4-light"></b> to get here</p>
+        <p id="info4-fact"></p>
+      </div>
+    </div>
     <div class="controls">
       <button class="ctl primary" id="play4">▶ Ride the light beam</button>
       <button class="ctl" id="reset4">↺ Back to the Sun</button>
+      <span class="ctl-label">Zoom:</span>
+      <button class="ctl zoom4 active" data-zoom="Mars">Inner planets</button>
+      <button class="ctl zoom4" data-zoom="Jupiter">To Jupiter</button>
+      <button class="ctl zoom4" data-zoom="Uranus">Whole strip</button>
       <span class="ctl-label">Trip speed:</span>
       <input type="range" id="speed4" min="1" max="10" step="1" value="4" />
     </div>
-    <div class="banner warm" id="banner4">Light travels 300,000 km every <strong>second</strong> — it could circle Earth 7½ times in one blink. Even at that speed, the trip out to Uranus takes <strong>2 hours 40 minutes</strong>.</div>
-    <p class="caption"><strong>Look how squished the rocky planets are!</strong> Mercury, Venus, Earth, and Mars all crowd near the Sun, then space gets emptier and emptier. If the Sun-to-Earth distance were one big step, Uranus would be <strong>19 steps</strong> away. The clock shows the real time light needs — scientists write these giant distances with <span class="gl" data-def="A short way to write huge numbers. 7.79 × 10⁸ means 779,000,000 — the little number counts the zeros.">scientific notation</span>, like 7.79 × 10⁸ km for Jupiter.</p>
+    <div class="banner warm" id="banner4">Earth sits <strong>1.5 × 10⁸ km</strong> from the Sun — that's a 1.5 with <strong>8 zeros</strong> after it. Every time that little exponent goes up by 1, the real number gets <strong>10 times bigger</strong>. <strong>Click any planet</strong> to see its distance both ways.</div>
+    <p class="caption"><strong>This is your relative size idea in action:</strong> Uranus isn't small, it just looks small because it's far away — the same reason a plane looks tiny in the sky even though it's huge up close. <strong>Look how squished the rocky planets are!</strong> Mercury, Venus, Earth, and Mars all crowd near the Sun, then space gets emptier and emptier. <strong>Watch the exponent, not just the number:</strong> Earth is 1.5 × 10⁸ km out, Jupiter is 7.79 × 10⁸ km (same-size exponent, bigger first number), but Uranus jumps to 2.87 × 10⁹ km — that exponent flipping from <span class="gl" data-def="10⁸ means 1 followed by 8 zeros: 100,000,000.">8 to 9</span> means Uranus is over <strong>10 times farther</strong> than Earth, not just a little farther.</p>
   </div>
 </section>
 
 <!-- ══════════════════ PANEL 5: SEASONS ══════════════════ -->
 <section>
   <div class="panel">
-    <h2>5. Why We Have Seasons</h2>
+    <h2>2. Why We Have Seasons</h2>
     <p class="subtitle">Earth is tilted 23.4° — and that tilt <strong>always points the same way in space</strong> as Earth circles the Sun. Press Play and watch the season change at each labeled stop.</p>
     <div class="canvas-wrap"><canvas id="cv5" height="560"></canvas></div>
     <div class="controls">
@@ -251,6 +196,7 @@
   </div>
 </section>
 
+
 </main>
 
 <footer>
@@ -260,7 +206,7 @@
 
 <script>
 "use strict";
-const PLANETS = [{"name": "Mercury", "a": 0.387, "e": 0.206, "period": 87.97, "color": "#b1adad", "distKm": 57894375.960899994, "lightMin": 3.2185808557432085, "fact": "A year on Mercury is only 88 days, but one Mercury day (sunrise to sunrise) lasts 176 Earth days!"}, {"name": "Venus", "a": 0.723, "e": 0.007, "period": 224.7, "color": "#e6c27a", "distKm": 108159260.51609999, "lightMin": 6.013007645225684, "fact": "Venus spins backwards, and it's the hottest planet \u2014 about 465\u00b0C, hot enough to melt lead."}, {"name": "Earth", "a": 1.0, "e": 0.0167, "period": 365.25, "color": "#3f8efc", "distKm": 149597870.7, "lightMin": 8.316746397269272, "fact": "Home! Earth is the only planet not named after a Greek or Roman god."}, {"name": "Mars", "a": 1.524, "e": 0.093, "period": 686.98, "color": "#c1440e", "distKm": 227987154.9468, "lightMin": 12.674721509438372, "fact": "Mars has the tallest volcano in the solar system: Olympus Mons, almost 3\u00d7 the height of Mt. Everest."}, {"name": "Jupiter", "a": 5.203, "e": 0.049, "period": 4332.59, "color": "#d8ae7e", "distKm": 778357721.2521, "lightMin": 43.27203150499203, "fact": "Jupiter is so big that all the other planets could fit inside it. Its Great Red Spot is a storm bigger than Earth."}, {"name": "Saturn", "a": 9.537, "e": 0.0565, "period": 10759.22, "color": "#e3c16f", "distKm": 1426714892.8659, "lightMin": 79.31681039075706, "fact": "Saturn's rings are made of billions of chunks of ice, from dust-size to house-size."}, {"name": "Uranus", "a": 19.191, "e": 0.0457, "period": 30688.5, "color": "#9fd9d9", "distKm": 2870932736.6036997, "lightMin": 159.6066801099946, "fact": "Uranus rolls around the Sun on its side, like a bowling ball."}];
+const PLANETS = [{"name": "Mercury", "a": 0.387, "e": 0.206, "period": 87.97, "color": "#b1adad", "distKm": 57894375.960899994, "lightMin": 3.2185808557432085, "fact": "A year on Mercury is only 88 days, but one Mercury day (sunrise to sunrise) lasts 176 Earth days!"}, {"name": "Venus", "a": 0.723, "e": 0.007, "period": 224.7, "color": "#e6c27a", "distKm": 108159260.51609999, "lightMin": 6.013007645225684, "fact": "Venus spins backwards, and it's the hottest planet — about 465°C, hot enough to melt lead."}, {"name": "Earth", "a": 1.0, "e": 0.0167, "period": 365.25, "color": "#3f8efc", "distKm": 149597870.7, "lightMin": 8.316746397269272, "fact": "Home! Earth is the only planet not named after a Greek or Roman god."}, {"name": "Mars", "a": 1.524, "e": 0.093, "period": 686.98, "color": "#c1440e", "distKm": 227987154.9468, "lightMin": 12.674721509438372, "fact": "Mars has the tallest volcano in the solar system: Olympus Mons, almost 3× the height of Mt. Everest."}, {"name": "Jupiter", "a": 5.203, "e": 0.049, "period": 4332.59, "color": "#d8ae7e", "distKm": 778357721.2521, "lightMin": 43.27203150499203, "fact": "Jupiter is so big that all the other planets could fit inside it. Its Great Red Spot is a storm bigger than Earth."}, {"name": "Saturn", "a": 9.537, "e": 0.0565, "period": 10759.22, "color": "#e3c16f", "distKm": 1426714892.8659, "lightMin": 79.31681039075706, "fact": "Saturn's rings are made of billions of chunks of ice, from dust-size to house-size."}, {"name": "Uranus", "a": 19.191, "e": 0.0457, "period": 30688.5, "color": "#9fd9d9", "distKm": 2870932736.6036997, "lightMin": 159.6066801099946, "fact": "Uranus rolls around the Sun on its side, like a bowling ball."}];
 const EARTH = PLANETS[2];
 const TILT_DEG = 23.44;
 
@@ -289,6 +235,14 @@ function orbitPath(p, n = 180) {
 }
 function fmt(n, d = 2) { return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d }); }
 function fmtInt(n) { return Math.round(n).toLocaleString("en-US"); }
+const SUPER = { "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" };
+function sciNotation(km) {                 // "7.79 x 10^8 km" -> readable exponent form
+  if (km <= 0) return "0 km";
+  const exp = Math.floor(Math.log10(km));
+  const mant = km / Math.pow(10, exp);
+  const expDigits = String(exp).split("").map(c => SUPER[c] || c).join("");
+  return `${fmt(mant, 2)} × 10${expDigits} km`;
+}
 
 // Crisp canvas on any screen; re-renders on resize (fixes the overlap /
 // non-responsive complaint — the canvas always matches its container).
@@ -337,320 +291,20 @@ function placeLabels(ctx, items, fontPx) {
   }
 }
 
-// ══════════════════ PANEL 1 ══════════════════
-(function panel1() {
-  const cv = document.getElementById("cv1");
-  const playBtn = document.getElementById("play1");
-  const banner = document.getElementById("banner1");
-  const speed = document.getElementById("speed1");
-  const info = document.getElementById("info1");
-  const paths = PLANETS.map(p => orbitPath(p));
-  let day = 0, playing = false, zoom = 1.9, zoomTarget = 1.9, last = 0;
-  let screenPos = [];   // for click detection
-
-  const milestones = [
-    { day: 88, text: "<strong>Mercury</strong> finished a whole year (88 days) while Earth is only a quarter of the way around!" },
-    { day: 225, text: "<strong>Venus</strong> completed its year (225 days). Earth still has 140 days to go." },
-    { day: 365, text: "🎉 <strong>Earth finished one year — 365 days!</strong> Mercury has already gone around 4 times. Jupiter has barely moved: its year lasts 12 Earth-years." },
-    { day: 687, text: "<strong>Mars</strong> just finished its year: 687 days, almost 2 Earth-years." },
-  ];
-  let nextMilestone = 0;
-
-  function draw() {
-    const { ctx, w, h } = fitCanvas(cv, Math.min(0.75, Math.max(0.55, 520 / cv.clientWidth)));
-    const cx = w / 2, cy = h / 2;
-    zoom += (zoomTarget - zoom) * 0.08;             // smooth animated zoom
-    const scale = Math.min(w, h) / 2 / zoom * 0.92;
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, w, h);
-
-    // faint starfield
-    ctx.fillStyle = "rgba(255,255,255,0.25)";
-    for (let i = 0; i < 60; i++) {
-      const sx = (i * 97 % 1000) / 1000 * w, sy = (i * 389 % 1000) / 1000 * h;
-      ctx.fillRect(sx, sy, 1.2, 1.2);
-    }
-
-    // orbits
-    for (let i = 0; i < PLANETS.length; i++) {
-      ctx.strokeStyle = PLANETS[i].color; ctx.globalAlpha = 0.4; ctx.lineWidth = 1;
-      ctx.beginPath();
-      paths[i].forEach(([x, y], j) => { const px = cx + x * scale, py = cy - y * scale; j ? ctx.lineTo(px, py) : ctx.moveTo(px, py); });
-      ctx.stroke(); ctx.globalAlpha = 1;
-    }
-    drawSun(ctx, cx, cy, Math.max(6, 10 * Math.sqrt(1.9 / zoom)));
-
-    // planets + labels
-    screenPos = [];
-    const labelItems = [];
-    for (const p of PLANETS) {
-      const [x, y] = posAt(p, day);
-      const px = cx + x * scale, py = cy - y * scale;
-      const r = Math.max(3.5, 6.5 * Math.sqrt(1.9 / zoom));
-      const visible = px > -30 && px < w + 30 && py > -30 && py < h + 30;
-      screenPos.push({ p, px, py, r, visible });
-      if (!visible) continue;
-      ctx.fillStyle = p.color;
-      ctx.beginPath(); ctx.arc(px, py, r, 0, 7); ctx.fill();
-      ctx.strokeStyle = "rgba(238,241,255,0.8)"; ctx.lineWidth = 1; ctx.stroke();
-      labelItems.push({ x: px, y: py, r, text: p.name, color: C.muted });
-    }
-    placeLabels(ctx, labelItems, Math.max(10, Math.min(13, w / 55)));
-
-    // day counter
-    ctx.fillStyle = C.text; ctx.font = "600 14px 'Segoe UI', sans-serif"; ctx.textAlign = "left"; ctx.textBaseline = "top";
-    ctx.fillText(`Day ${fmtInt(day)}  (${fmt(day / 365.25, 1)} Earth-years)`, 12, 10);
-  }
-
-  function tick(t) {
-    if (playing) {
-      day += Number(speed.value) * Math.min(2.5, (t - last) / 16.7);
-      if (nextMilestone < milestones.length && day >= milestones[nextMilestone].day) {
-        banner.innerHTML = milestones[nextMilestone].text;
-        nextMilestone++;
-      }
-    }
-    last = t;
-    draw();
-    requestAnimationFrame(tick);
-  }
-
-  playBtn.addEventListener("click", () => {
-    playing = !playing;
-    playBtn.textContent = playing ? "⏸ Pause" : "▶ Play";
-    if (playing && day === 0) banner.innerHTML = "The clock is running — <strong>watch Mercury</strong>, the fastest planet. Milestones will pop up here as planets finish their years.";
-  });
-  document.querySelectorAll(".zoom1").forEach(b => b.addEventListener("click", () => {
-    document.querySelectorAll(".zoom1").forEach(x => x.classList.remove("active"));
-    b.classList.add("active");
-    zoomTarget = Number(b.dataset.zoom);
-    banner.innerHTML = zoomTarget > 15
-      ? "Zoomed all the way out. See how tiny the inner orbits look? <strong>Uranus is 19× farther from the Sun than Earth.</strong> Panel 4 explores this."
-      : zoomTarget > 4
-        ? "Now you can see <strong>Jupiter and Saturn</strong>. Notice they crawl compared to the inner planets."
-        : "Zoomed in on the four rocky planets: Mercury, Venus, Earth, Mars.";
-  }));
-  cv.addEventListener("click", (ev) => {
-    const rect = cv.getBoundingClientRect();
-    const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
-    let best = null, bestD = 26;
-    for (const s of screenPos) {
-      if (!s.visible) continue;
-      const d = Math.hypot(mx - s.px, my - s.py);
-      if (d < bestD) { best = s; bestD = d; }
-    }
-    if (!best) { info.style.display = "none"; return; }
-    const p = best.p;
-    document.getElementById("info1-name").textContent = p.name;
-    document.getElementById("info1-name").style.color = p.color;
-    document.getElementById("info1-dist").textContent = `${fmt(p.a)} AU (${fmtInt(p.distKm / 1e6)} million km)`;
-    document.getElementById("info1-year").textContent = p.period < 1000 ? `${fmtInt(p.period)} Earth-days` : `${fmt(p.period / 365.25, 1)} Earth-years`;
-    document.getElementById("info1-fact").textContent = p.fact;
-    info.style.display = "block";
-  });
-  info.querySelector(".close").addEventListener("click", () => info.style.display = "none");
-  new ResizeObserver(draw).observe(cv);
-  requestAnimationFrame(tick);
-})();
-
-// ══════════════════ PANEL 2 ══════════════════
-(function panel2() {
-  const cv = document.getElementById("cv2");
-  const playBtn = document.getElementById("play2");
-  const banner = document.getElementById("banner2");
-  const path = orbitPath(EARTH, 240);
-  const SPAN = 30;                       // days per wedge
-  let frac = 0, playing = false;
-
-  // Exaggerated-eccentricity orbit for the *drawing* so the effect is visible.
-  // Earth's real e=0.0167 looks like a circle; kids can't see the difference.
-  const DEMO = { a: 1, e: 0.35, period: 365.25 };
-  const demoPath = orbitPath(DEMO, 240);
-
-  function wedge(ctx, startDay, f, cx, cy, scale, fill, stroke) {
-    const days = Math.max(2, Math.round(40 * f));
-    ctx.beginPath(); ctx.moveTo(cx, cy);
-    for (let i = 0; i <= days; i++) {
-      const [x, y] = posAt(DEMO, startDay + SPAN * f * i / days);
-      ctx.lineTo(cx + x * scale, cy - y * scale);
-    }
-    ctx.closePath();
-    ctx.fillStyle = fill; ctx.fill();
-    ctx.strokeStyle = stroke; ctx.lineWidth = 1.5; ctx.stroke();
-  }
-  function shoelace(startDay, f) {
-    const days = 40; let area = 0; let prev = posAt(DEMO, startDay);
-    for (let i = 1; i <= days; i++) {
-      const cur = posAt(DEMO, startDay + SPAN * f * i / days);
-      area += (prev[0] * cur[1] - cur[0] * prev[1]) / 2;
-      prev = cur;
-    }
-    return Math.abs(area);
-  }
-
-  function draw() {
-    const { ctx, w, h } = fitCanvas(cv, Math.min(0.72, Math.max(0.5, 480 / cv.clientWidth)));
-    const cx = w * 0.58, cy = h / 2, scale = Math.min(w, h) / 2 * 0.62;
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, w, h);
-
-    ctx.strokeStyle = EARTH.color; ctx.globalAlpha = 0.6; ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    demoPath.forEach(([x, y], j) => { const px = cx + x * scale, py = cy - y * scale; j ? ctx.lineTo(px, py) : ctx.moveTo(px, py); });
-    ctx.stroke(); ctx.globalAlpha = 1;
-
-    const aphStart = DEMO.period / 2;
-    if (frac > 0) {
-      wedge(ctx, 0, frac, cx, cy, scale, "rgba(79,209,197,0.45)", C.accent);
-      wedge(ctx, aphStart, frac, cx, cy, scale, "rgba(255,143,163,0.45)", C.warm);
-    }
-    drawSun(ctx, cx, cy, 9);
-
-    // the two Earth markers riding the wedge edges
-    for (const [start, color] of [[0, C.accent], [aphStart, C.warm]]) {
-      const [x, y] = posAt(DEMO, start + SPAN * frac);
-      ctx.fillStyle = color;
-      ctx.beginPath(); ctx.arc(cx + x * scale, cy - y * scale, 7, 0, 7); ctx.fill();
-      ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke();
-    }
-
-    // live area scoreboard
-    const a1 = shoelace(0, frac), a2 = shoelace(aphStart, frac);
-    const fs = Math.max(12, Math.min(15, w / 46));
-    ctx.font = `600 ${fs}px 'Segoe UI', sans-serif`; ctx.textAlign = "left"; ctx.textBaseline = "top";
-    ctx.fillStyle = C.accent;  ctx.fillText(`● Near the Sun:  ${fmt(a1, 3)} area units`, 12, 10);
-    ctx.fillStyle = C.warm;    ctx.fillText(`● Far from Sun:  ${fmt(a2, 3)} area units`, 12, 14 + fs);
-    ctx.fillStyle = C.muted; ctx.font = `${fs - 2}px 'Segoe UI', sans-serif`;
-    ctx.fillText(`Days passed: ${fmt(SPAN * frac, 0)} of ${SPAN}`, 12, 22 + fs * 2);
-
-    // labels near/far
-    ctx.font = `${fs - 2}px 'Segoe UI', sans-serif`; ctx.textAlign = "center";
-    const [nx, ny] = posAt(DEMO, 0);
-    ctx.fillStyle = C.accent; ctx.fillText("closest point (fast!)", cx + nx * scale, cy - ny * scale + 22);
-    const [fx2, fy2] = posAt(DEMO, aphStart);
-    ctx.fillStyle = C.warm; ctx.fillText("farthest point (slow)", cx + fx2 * scale, cy - fy2 * scale + 22);
-  }
-
-  function tick() {
-    if (playing) {
-      frac = Math.min(1, frac + 0.006);
-      if (frac >= 1) {
-        playing = false; playBtn.textContent = "▶ Play";
-        banner.innerHTML = "🎉 <strong>Both slices ended with the same area!</strong> The near-Sun Earth traveled a much longer path in its 30 days (it moves faster), but the slice is skinnier. Equal areas in equal times — Kepler's Second Law.";
-        banner.classList.remove("warm");
-      } else if (frac > 0.4 && frac < 0.42) {
-        banner.innerHTML = "Look: the <strong>teal slice</strong> is long and skinny, the <strong>pink slice</strong> is short and wide. Keep watching the two area counters...";
-      }
-    }
-    draw();
-    requestAnimationFrame(tick);
-  }
-  playBtn.addEventListener("click", () => {
-    if (frac >= 1) frac = 0;
-    playing = !playing;
-    playBtn.textContent = playing ? "⏸ Pause" : "▶ Play";
-  });
-  document.getElementById("reset2").addEventListener("click", () => { frac = 0; playing = false; playBtn.textContent = "▶ Play"; });
-  new ResizeObserver(draw).observe(cv);
-  requestAnimationFrame(tick);
-})();
-
-// ══════════════════ PANEL 3 ══════════════════
-(function panel3() {
-  const chips = document.getElementById("chips3");
-  const cv = document.getElementById("cv3");
-  const checked = new Set();
-  let flash = null;   // planet just checked, for a highlight pulse
-
-  PLANETS.forEach((p, i) => {
-    const b = document.createElement("button");
-    b.className = "chip"; b.textContent = p.name;
-    b.style.setProperty("--chip-color", p.color);
-    b.addEventListener("click", () => select(i, b));
-    chips.appendChild(b);
-  });
-
-  function select(i, btn) {
-    const p = PLANETS[i];
-    const a3 = p.a ** 3, tYr = p.period / 365.25, t2 = tYr ** 2;
-    document.getElementById("eq3-a").innerHTML = `${fmt(p.a)} × ${fmt(p.a)} × ${fmt(p.a)} = <b style="color:var(--accent)">${fmt(a3)}</b>`;
-    document.getElementById("eq3-t").innerHTML = `${fmt(tYr)} × ${fmt(tYr)} = <b style="color:var(--accent-warm)">${fmt(t2)}</b>`;
-    const maxV = Math.max(a3, t2, 1);
-    // Same scale for both bars, so equal numbers = equal bars, visibly.
-    const scaleMax = maxV * 1.15;
-    const barA = document.getElementById("bar3-a"), barT = document.getElementById("bar3-t");
-    barA.style.width = "0%"; barT.style.width = "0%";
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      barA.style.width = (a3 / scaleMax * 100) + "%"; barA.textContent = fmt(a3);
-      barT.style.width = (t2 / scaleMax * 100) + "%"; barT.textContent = fmt(t2);
-    }));
-    const match = Math.abs(a3 - t2) / Math.max(a3, t2) < 0.03;
-    document.getElementById("verdict3").innerHTML = match
-      ? `✅ <b>${p.name}: the two numbers match!</b> ${checked.size + (checked.has(i) ? 0 : 1)} of 7 planets checked.`
-      : `${p.name}: ${fmt(a3)} vs ${fmt(t2)}`;
-    checked.add(i); btn.classList.add("done");
-    flash = { i, t: performance.now() };
-    drawChart();
-    if (checked.size === 7) {
-      document.getElementById("verdict3").innerHTML = "🏆 <b>All 7 planets checked — every single one matches.</b> One rule runs the whole solar system: T² = a³. Kepler found it in 1618, using only pencil-and-paper math.";
-    }
-  }
-
-  function drawChart() {
-    const { ctx, w, h } = fitCanvas(cv, Math.min(0.6, Math.max(0.45, 360 / cv.clientWidth)));
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, w, h);
-    const pad = { l: 56, r: 16, t: 26, b: 42 };
-    const pw = w - pad.l - pad.r, ph = h - pad.t - pad.b;
-    // log-log axes so the far planets don't crush the inner ones off the chart
-    const vMin = 0.03, vMax = 12000;
-    const X = v => pad.l + (Math.log10(v) - Math.log10(vMin)) / (Math.log10(vMax) - Math.log10(vMin)) * pw;
-    const Y = v => pad.t + ph - (Math.log10(v) - Math.log10(vMin)) / (Math.log10(vMax) - Math.log10(vMin)) * ph;
-
-    ctx.strokeStyle = C.grid; ctx.lineWidth = 1;
-    ctx.font = "11px 'Segoe UI', sans-serif"; ctx.fillStyle = C.muted; ctx.textAlign = "center";
-    for (const v of [0.1, 1, 10, 100, 1000, 10000]) {
-      ctx.beginPath(); ctx.moveTo(X(v), pad.t); ctx.lineTo(X(v), pad.t + ph); ctx.stroke();
-      ctx.fillText(fmtInt(v) >= 1 ? fmtInt(v) : v, X(v), pad.t + ph + 14);
-      ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(pad.l + pw, Y(v)); ctx.stroke();
-      ctx.textAlign = "right"; ctx.fillText(fmtInt(v) >= 1 ? fmtInt(v) : v, pad.l - 6, Y(v) + 3); ctx.textAlign = "center";
-    }
-    ctx.fillStyle = C.muted; ctx.font = "12px 'Segoe UI', sans-serif";
-    ctx.fillText("distance cubed (a³)", pad.l + pw / 2, h - 8);
-    ctx.save(); ctx.translate(14, pad.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("year squared (T²)", 0, 0); ctx.restore();
-
-    // the T² = a³ line
-    ctx.strokeStyle = C.accent; ctx.setLineDash([6, 5]); ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.moveTo(X(vMin), Y(vMin)); ctx.lineTo(X(vMax), Y(vMax)); ctx.stroke();
-    ctx.setLineDash([]);
-
-    const labelItems = [];
-    for (const i of checked) {
-      const p = PLANETS[i];
-      const a3 = p.a ** 3, t2 = (p.period / 365.25) ** 2;
-      const px = X(a3), py = Y(t2);
-      let r = 6;
-      if (flash && flash.i === i) {
-        const dt = performance.now() - flash.t;
-        if (dt < 900) { r = 6 + 8 * Math.max(0, 1 - dt / 900); requestAnimationFrame(drawChart); }
-      }
-      ctx.fillStyle = p.color;
-      ctx.beginPath(); ctx.arc(px, py, r, 0, 7); ctx.fill();
-      ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke();
-      labelItems.push({ x: px, y: py, r: 5, text: p.name, color: C.muted });
-    }
-    placeLabels(ctx, labelItems, 11);
-  }
-  new ResizeObserver(drawChart).observe(cv);
-  drawChart();
-})();
-
 // ══════════════════ PANEL 4 ══════════════════
 (function panel4() {
   const cv = document.getElementById("cv4");
   const playBtn = document.getElementById("play4");
   const banner = document.getElementById("banner4");
   const speed = document.getElementById("speed4");
-  const maxMin = PLANETS[PLANETS.length - 1].lightMin * 1.04;  // full trip, light-minutes
+  const info = document.getElementById("info4");
+  const fullMaxMin = PLANETS[PLANETS.length - 1].lightMin * 1.04;  // full trip, light-minutes
+  const KM_PER_LIGHTMIN = PLANETS[0].distKm / PLANETS[0].lightMin;
+  let zoomTo = "Mars";                          // which planet's distance sets the visible range
+  let maxMin = PLANETS.find(p => p.name === zoomTo).lightMin * 1.15;
   let t = 0, playing = false;   // t = light-minutes elapsed
   let passed = -1;
+  let screenPos = [];           // last-drawn planet screen positions, for click detection
 
   function fmtClock(min) {
     if (min < 60) return `${fmt(min, 1)} minutes`;
@@ -688,11 +342,13 @@ function placeLabels(ctx, items, fontPx) {
     const fs = Math.max(9.5, Math.min(12.5, w / 60));
     ctx.font = `${fs}px 'Segoe UI', sans-serif`; ctx.textAlign = "center";
     const minGap = Math.max(52, fs * 5.2);
+    const visible = PLANETS.filter(p => p.lightMin <= maxMin * 1.02);
     const slots = { above: [], below: [] };
-    PLANETS.forEach((p, i) => {
+    visible.forEach((p, i) => {
       const side = i % 2 === 0 ? "above" : "below";
       slots[side].push({ p, i, px: X(p.lightMin), lx: X(p.lightMin) });
     });
+    screenPos = [];
     for (const side of ["above", "below"]) {          // spread labels left-to-right
       const arr = slots[side];
       for (let k = 1; k < arr.length; k++) arr[k].lx = Math.max(arr[k].lx, arr[k - 1].lx + minGap);
@@ -714,6 +370,7 @@ function placeLabels(ctx, items, fontPx) {
         ctx.fillText(fmtClock(p.lightMin), lx, ty2);
         ctx.strokeStyle = C.grid; ctx.lineWidth = 1;
         ctx.beginPath(); ctx.moveTo(px, yTrack + (above ? -10 : 10)); ctx.lineTo(lx, above ? ty1 + 9 : ty1 - 11); ctx.stroke();
+        screenPos.push({ p, px, py: yTrack });
       }
     }
 
@@ -728,7 +385,8 @@ function placeLabels(ctx, items, fontPx) {
 
     // clock
     ctx.fillStyle = C.text; ctx.font = `600 ${Math.max(13, Math.min(17, w / 44))}px 'Segoe UI', sans-serif`; ctx.textAlign = "left";
-    ctx.fillText(`⏱ Light-travel clock: ${fmtClock(Math.min(t, maxMin))}`, padL, 16);
+    const kmSoFar = Math.min(t, maxMin) * KM_PER_LIGHTMIN;
+    ctx.fillText(`📏 Distance so far: ${sciNotation(kmSoFar)}  (${fmtClock(Math.min(t, maxMin))} at light speed)`, padL, 16);
   }
 
   function tick() {
@@ -739,11 +397,12 @@ function placeLabels(ctx, items, fontPx) {
       if (idx > passed) {
         passed = idx;
         const p = PLANETS[idx];
-        banner.innerHTML = `✨ Passing <strong>${p.name}</strong> after <strong>${fmtClock(p.lightMin)}</strong> of travel — that's ${fmt(p.distKm / 1e6, 0)} million km (${p.name === "Earth" ? "1 AU, our home distance" : fmt(p.a, 1) + " AU"}) from the Sun.`;
+        banner.innerHTML = `✨ Passing <strong>${p.name}</strong> — <strong>${sciNotation(p.distKm)}</strong> from the Sun (${p.name === "Earth" ? "1 AU, our home distance" : fmt(p.a, 1) + " AU"}). That took ${fmtClock(p.lightMin)} at light speed.`;
       }
       if (t >= maxMin) {
         playing = false; playBtn.textContent = "▶ Ride the light beam";
-        banner.innerHTML = `🏁 <strong>Trip complete: 2 hours 40 minutes at the speed of light.</strong> A car driving highway speed would need about <strong>3,000 years</strong> to make this trip. Space is BIG.`;
+        const finalKm = maxMin * KM_PER_LIGHTMIN;
+        banner.innerHTML = `🏁 <strong>You've gone ${sciNotation(finalKm)}.</strong> Try a bigger zoom to watch that exponent climb even higher — all the way out to Uranus it hits <strong>10⁹</strong>.`;
       }
     }
     draw();
@@ -758,6 +417,32 @@ function placeLabels(ctx, items, fontPx) {
     t = 0; passed = -1; playing = false; playBtn.textContent = "▶ Ride the light beam";
     banner.innerHTML = "Back at the Sun. Press play to ride out again — watch how long the empty stretches get past Mars.";
   });
+  document.querySelectorAll(".zoom4").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".zoom4").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    zoomTo = b.dataset.zoom;
+    maxMin = PLANETS.find(p => p.name === zoomTo).lightMin * 1.15;
+    t = 0; passed = -1; playing = false; playBtn.textContent = "▶ Ride the light beam";
+    draw();
+  }));
+  cv.addEventListener("click", (ev) => {
+    const rect = cv.getBoundingClientRect();
+    const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+    let best = null, bestD = 26;
+    for (const s of screenPos) {
+      const d = Math.hypot(mx - s.px, my - s.py);
+      if (d < bestD) { bestD = d; best = s; }
+    }
+    if (!best) { info.style.display = "none"; return; }
+    const p = best.p;
+    info.querySelector("#info4-name").textContent = p.name;
+    info.querySelector("#info4-dist").textContent = `${fmt(p.distKm / 1e6, 0)} million km (${p.name === "Earth" ? "1 AU" : fmt(p.a, 2) + " AU"})`;
+    info.querySelector("#info4-sci").textContent = sciNotation(p.distKm);
+    info.querySelector("#info4-light").textContent = fmtClock(p.lightMin);
+    info.querySelector("#info4-fact").textContent = p.fact;
+    info.style.display = "block";
+  });
+  info.querySelector(".close").addEventListener("click", () => info.style.display = "none");
   new ResizeObserver(draw).observe(cv);
   requestAnimationFrame(tick);
 })();
